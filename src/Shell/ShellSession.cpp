@@ -152,17 +152,4 @@ inline void ShellSession::pleaseInputPasswd() {
             });
         };
 
-        auto flag = NoticeCenter::Instance().emitEvent(Broadcast::kBroadcastShellLogin,_strUserName,passwd,invoker,*this);
-        if(!flag){
-            //如果无人监听shell登录事件，那么默认shell无法登录
-            onAuth("please listen kBroadcastShellLogin event");
-        }
-		return true;
-	};
-}
-
-inline void ShellSession::printShellPrefix() {
-	send(StrPrinter << _strUserName << "@" << SERVER_NAME << "# " << endl);
-}
-
-}/* namespace mediakit */
+        aut
